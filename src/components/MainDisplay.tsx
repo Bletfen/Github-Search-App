@@ -26,19 +26,19 @@ export default function MainDisplay() {
       <div
         className="flex py-[1.8rem] px-[1.5rem]
       bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center
-      justify-start"
+      justify-around"
       >
         <div className="flex flex-col">
           <span>Repos</span>
-          <span>8</span>
+          <span className="text-[1.6rem] font-[700] uppercase">8</span>
         </div>
         <div className="flex flex-col">
           <span>Followers</span>
-          <span>3938</span>
+          <span className="text-[1.6rem] font-[700] uppercase">3938</span>
         </div>
         <div className="flex flex-col">
           <span>Following</span>
-          <span>9</span>
+          <span className="text-[1.6rem] font-[700] uppercase">9</span>
         </div>
       </div>
       <div>
