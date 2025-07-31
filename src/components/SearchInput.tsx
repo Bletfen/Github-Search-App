@@ -7,6 +7,10 @@ export default function SearchInput({
   searchInput: TSearch;
   setSearchInput: React.Dispatch<React.SetStateAction<string>>;
 }) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchInput(e.target.value);
+  };
+  console.log(searchInput);
   return (
     <div
       className="text-[#fff] w-full
@@ -20,6 +24,8 @@ export default function SearchInput({
         placeholder="Search GitHub username…"
         className="mr-[0.7rem] w-full
         text-[#fff] text-[1.3rem] font-[400] leading-[2.5rem]"
+        value={searchInput}
+        onChange={(e) => handleChange(e)}
       />
       <button
         className="py-[1.2rem] px-[1.6rem]
