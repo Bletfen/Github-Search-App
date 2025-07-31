@@ -1,5 +1,12 @@
 import SearchSvg from "/assets/icon-search.svg";
-export default function SearchInput() {
+import type { TSearch } from "../types";
+export default function SearchInput({
+  searchInput,
+  setSearchInput,
+}: {
+  searchInput: TSearch;
+  setSearchInput: React.Dispatch<React.SetStateAction<string>>;
+}) {
   return (
     <div
       className="text-[#fff] w-full
