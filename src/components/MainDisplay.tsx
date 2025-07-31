@@ -16,9 +16,13 @@ export default function MainDisplay() {
           className="flex flex-col
           text-[#fff]"
         >
-          <h2 className="text-[1.6rem]">The Octocat</h2>
-          <span>@octocat</span>
-          <p className="mt-[0.6rem]">Joined 25 Jan 2011</p>
+          <h2 className="text-[1.6rem] font-[700]">The Octocat</h2>
+          <span className="text-[#0079ff] text-[1.3rem] font-[400]">
+            @octocat
+          </span>
+          <p className="mt-[0.6rem] text-[1.3rem] font-[400]">
+            Joined 25 Jan 2011
+          </p>
         </div>
       </div>
       <p>
