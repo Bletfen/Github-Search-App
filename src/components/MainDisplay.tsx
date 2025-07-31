@@ -25,7 +25,12 @@ export default function MainDisplay({
           {userInfo && (
             <h2 className="text-[1.6rem] font-[700]">{userInfo.name}</h2>
           )}
-          <span className="text-[#0079ff]">{userInfo?.login}</span>
+          <a
+            href={`https://github.com/${userInfo?.login}`}
+            className="text-[#0079ff]"
+          >
+            @{userInfo?.login}
+          </a>
           <p className="mt-[0.6rem]">{userInfo?.created_at}</p>
         </div>
       </div>
