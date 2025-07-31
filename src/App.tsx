@@ -10,6 +10,7 @@ function App() {
   const fetchData = async () => {
     const response = await fetch(`https://api.github.com/users/${searchInput}`);
     const resData = await response.json();
+    setUserInfo(resData);
     console.log(resData);
   };
   useEffect(() => {
@@ -28,7 +29,7 @@ function App() {
         setSearchInput={setSearchInput}
         fetchData={fetchData}
       />
-      <MainDisplay searchInput={searchInput} fetchData={fetchData} />
+      <MainDisplay searchInput={searchInput} userInfo={userInfo} />
     </div>
   );
 }

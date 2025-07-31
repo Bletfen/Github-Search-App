@@ -1,1 +1,16 @@
 export type TSearch = string;
+
+export interface IuserInfo {
+  name: string | null;
+  login: string | null;
+  created_at: string | null;
+  avatar_url: string | null;
+  bio: string | null;
+  public_repos: number;
+  followers: number;
+  following: number;
+  location: string;
+  blog: string | null;
+  twitter_username: string | null;
+  company: string;
+}
