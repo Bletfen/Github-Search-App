@@ -6,8 +6,11 @@ import Company from "/assets/icon-company.svg";
 
 export default function MainDisplay() {
   return (
-    <div>
-      <div>
+    <div
+      className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem]
+    px-[2.4rem] mt-[1.6rem]"
+    >
+      <div className="flex items-center">
         <img src={Logo} alt="" />
         <h2>The Octocat</h2>
         <span>@octocat</span>
