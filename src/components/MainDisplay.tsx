@@ -4,12 +4,11 @@ import WebSite from "/assets/icon-website.svg";
 import Twitter from "/assets/icon-twitter.svg";
 import Company from "/assets/icon-company.svg";
 import { useState } from "react";
+import type { TSearch } from "../types";
+import { fetchData } from "../searchFunctions";
 
-export default function MainDisplay() {
+export default function MainDisplay({ searchInput }: { searchInput: TSearch }) {
   const [data, setData] = useState();
-  const fetchData = async () => {
-    const response = await fetch("https://api.github.com/users/{username}");
-  };
   return (
     <div
       className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem]

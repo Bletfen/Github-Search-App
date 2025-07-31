@@ -1,5 +1,7 @@
 import SearchSvg from "/assets/icon-search.svg";
 import type { TSearch } from "../types";
+import { clickHandle } from "../searchFunctions";
+
 export default function SearchInput({
   searchInput,
   setSearchInput,
@@ -10,7 +12,6 @@ export default function SearchInput({
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(e.target.value);
   };
-  console.log(searchInput);
   return (
     <div
       className="text-[#fff] w-full

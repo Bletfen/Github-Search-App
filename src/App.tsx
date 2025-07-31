@@ -13,7 +13,7 @@ function App() {
     >
       <Header />
       <SearchInput searchInput={searchInput} setSearchInput={setSearchInput} />
-      <MainDisplay />
+      <MainDisplay searchInput={searchInput} />
     </div>
   );
 }
