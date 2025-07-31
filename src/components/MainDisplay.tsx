@@ -9,13 +9,6 @@ export default function MainDisplay({
 }: {
   userInfo: IuserInfo | null;
 }) {
-  const date = new Date(userInfo.created_at);
-  const formatted = date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short", // or "long"
-    day: "numeric",
-  });
-
   return (
     <div
       className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem] w-full
@@ -38,7 +31,16 @@ export default function MainDisplay({
           >
             @{userInfo?.login}
           </a>
-          <p className="mt-[0.6rem]">Joined {formatted}</p>
+          {userInfo && (
+            <p className="mt-[0.6rem]">
+              Joined{" "}
+              {new Date(userInfo.created_at).toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+              })}
+            </p>
+          )}
         </div>
       </div>
       {userInfo && (
