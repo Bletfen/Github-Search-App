@@ -6,7 +6,7 @@ export default function Header() {
       px-[2.4rem] pt-[3.1rem] items-center"
     >
       <h1>devfinder</h1>
-      <div className="flex items-center">
+      <div className="flex items-center gap-[1.6rem]">
         <p>LIGHT</p>
         <img src={SunSvg} alt="sun-icon" />
       </div>
