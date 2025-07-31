@@ -104,7 +104,7 @@ export default function MainDisplay({
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className={
-                userInfo?.location
+                userInfo?.blog
                   ? "text-white opacity-[1]"
                   : "opacity-[0.5] text-white"
               }
@@ -137,7 +137,7 @@ export default function MainDisplay({
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className={
-                userInfo?.location
+                userInfo?.twitter_username
                   ? "text-white opacity-[1]"
                   : "opacity-[0.5] text-white"
               }
@@ -167,7 +167,7 @@ export default function MainDisplay({
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className={
-                userInfo?.location
+                userInfo?.company
                   ? "text-white opacity-[1]"
                   : "opacity-[0.5] text-white"
               }
