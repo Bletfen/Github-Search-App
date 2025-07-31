@@ -1,16 +1,22 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import SearchInput from "./components/SearchInput";
 import MainDisplay from "./components/MainDisplay";
 import type { TSearch } from "./types";
 function App() {
   const [searchInput, setSearchInput] = useState<TSearch>("");
+  const [userInfo, setUserInfo] = useState<{}>({});
   const fetchData = async () => {
     const response = await fetch(`https://api.github.com/users/${searchInput}`);
     const resData = await response.json();
     console.log(resData);
   };
+  useEffect(() => {
+    fetch("https://api.github.com/users/TemuriTsutskiridze")
+      .then((res) => res.json())
+      .then((data) => setUserInfo(data));
+  }, []);
   return (
     <div
       className="bg-[#141d2f] h-screen px-[2.4rem] flex
