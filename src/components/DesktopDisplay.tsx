@@ -51,8 +51,8 @@ export default function DesktopDisplay({
           )}
           <div
             className="flex py-[1.8rem] px-[1.5rem]
-      bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center
-      justify-around mt-[3.2rem]"
+            bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center
+            justify-around mt-[3.2rem]"
           >
             <div className="flex flex-col gap-[0.8rem]">
               <span>Repos</span>
