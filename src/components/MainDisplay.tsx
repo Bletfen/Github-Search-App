@@ -11,10 +11,12 @@ export default function MainDisplay() {
     px-[2.4rem] mt-[1.6rem]"
     >
       <div className="flex items-center">
-        <img src={Logo} alt="" />
-        <h2>The Octocat</h2>
-        <span>@octocat</span>
-        <p>Joined 25 Jan 2011</p>
+        <img src={Logo} alt="" className="w-[7rem] h-[7rem]" />
+        <div>
+          <h2>The Octocat</h2>
+          <span>@octocat</span>
+          <p>Joined 25 Jan 2011</p>
+        </div>
       </div>
       <p>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
