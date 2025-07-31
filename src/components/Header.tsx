@@ -1,3 +1,8 @@
+import SunSvg from "/assets/icon-sun.svg";
 export default function Header() {
-  return <div>Header</div>;
+  return (
+    <div>
+      <h1>devfinder</h1>
+    </div>
+  );
 }
