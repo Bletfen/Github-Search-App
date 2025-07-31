@@ -14,16 +14,16 @@ export default function MainDisplay() {
       </p>
       <div>
         <div>
-          <span></span>
-          <span></span>
+          <span>Repos</span>
+          <span>8</span>
         </div>
         <div>
-          <span></span>
-          <span></span>
+          <span>Followers</span>
+          <span>3938</span>
         </div>
         <div>
-          <span></span>
-          <span></span>
+          <span>Following</span>
+          <span>9</span>
         </div>
       </div>
     </div>
