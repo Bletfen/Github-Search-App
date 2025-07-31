@@ -86,12 +86,7 @@ export default function MainDisplay({
             <img src={WebSite} alt="icon-website" />
 
             {userInfo?.blog ? (
-              <a
-                href={userInfo.blog}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 underline"
-              >
+              <a href={userInfo.blog} target="_blank" rel="noopener noreferrer">
                 {userInfo.blog}
               </a>
             ) : (
@@ -107,7 +102,6 @@ export default function MainDisplay({
                 href={`https://x.com/${userInfo?.twitter_username}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 underline"
               >
                 {userInfo?.twitter_username}
               </a>
