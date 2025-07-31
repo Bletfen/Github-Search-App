@@ -11,12 +11,16 @@ export default function MainDisplay({
 }) {
   return (
     <div
-      className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem]
+      className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem] w-full
       px-[2.4rem] mt-[1.6rem] text-[1.3rem] font-[400] text-[#fff]
       max-w-[73rem]"
     >
       <div className="flex items-center gap-[2rem] mb-[3.3rem]">
-        <img src={userInfo?.avatar_url} alt="" className="w-[7rem] h-[7rem]" />
+        <img
+          src={userInfo?.avatar_url}
+          alt=""
+          className="w-[7rem] h-[7rem] rounded-[7rem]"
+        />
         <div className="flex flex-col">
           {userInfo && (
             <h2 className="text-[1.6rem] font-[700]">{userInfo.name}</h2>
