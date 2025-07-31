@@ -1,4 +1,4 @@
-import SearchSvg from "/assets/search-icon.svg";
+import SearchSvg from "/assets/icon-search.svg";
 export default function SearchInput() {
   return (
     <div>
