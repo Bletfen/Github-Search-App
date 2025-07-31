@@ -15,25 +15,25 @@ export default function DesktopDisplay({
           <img
             src={userInfo?.avatar_url}
             alt=""
-            className="w-[7rem] h-[7rem] rounded-[7rem]"
+            className="w-[11.7rem] h-[11.7rem] rounded-[7rem]"
           />
         </div>
         <div>
           <div className="flex items-start justify-between mb-[2rem]">
             <div>
               {userInfo && (
-                <h2 className="text-[1.6rem] font-[700]">{userInfo.name}</h2>
+                <h2 className="text-[2.6rem] font-[700]">{userInfo.name}</h2>
               )}
               <a
                 href={`https://github.com/${userInfo?.login}`}
-                className="text-[#0079ff]"
+                className="text-[#0079ff] text-[1.6rem]"
               >
                 @{userInfo?.login}
               </a>
             </div>
             <div>
               {userInfo && (
-                <p className="mt-[0.6rem]">
+                <p className="mt-[0.6rem] text-[1.5] font-[400]">
                   Joined{" "}
                   {new Date(userInfo.created_at).toLocaleDateString("en-GB", {
                     day: "2-digit",
@@ -45,7 +45,7 @@ export default function DesktopDisplay({
             </div>
           </div>
           {userInfo && (
-            <p className="leading-[2.5rem]">
+            <p className="leading-[2.5rem] text-[1.5rem] font-[400] leading-[2.5rem]">
               {userInfo.bio ? userInfo.bio : "No bio available"}
             </p>
           )}
@@ -73,7 +73,7 @@ export default function DesktopDisplay({
               </span>
             </div>
           </div>
-          <div className="mt-[2.5rem] flex gap-[1.6rem]">
+          <div className="mt-[3.7rem] flex gap-[1.6rem]">
             <div className="flex flex-col gap-[1.6rem]">
               <div className="flex gap-[1.9rem]">
                 <svg
