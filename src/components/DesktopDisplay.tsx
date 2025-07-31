@@ -96,9 +96,13 @@ export default function DesktopDisplay({
                   />
                 </svg>
                 {userInfo?.location ? (
-                  <span>{userInfo.location}</span>
+                  <span className="text-[1.5rem] font-[400]">
+                    {userInfo.location}
+                  </span>
                 ) : (
-                  <span className="opacity-[0.5]">Not Available</span>
+                  <span className="opacity-[0.5] text-[1.5rem] font-[400]">
+                    Not Available
+                  </span>
                 )}
               </div>
               <div className="flex gap-[1.3rem]">
@@ -129,11 +133,14 @@ export default function DesktopDisplay({
                     href={userInfo.blog}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="text-[1.5rem] font-[400]"
                   >
                     {userInfo.blog}
                   </a>
                 ) : (
-                  <span className="opacity-[0.5]">Not Available</span>
+                  <span className="opacity-[0.5] text-[1.5rem] font-[400]">
+                    Not Available
+                  </span>
                 )}
               </div>
             </div>
@@ -161,11 +168,14 @@ export default function DesktopDisplay({
                     href={`https://x.com/${userInfo?.twitter_username}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="text-[1.5rem] font-[400]"
                   >
                     {userInfo?.twitter_username}
                   </a>
                 ) : (
-                  <span className="opacity-[0.5]">Not Available</span>
+                  <span className="opacity-[0.5] text-[1.5rem] font-[400]">
+                    Not Available
+                  </span>
                 )}
               </div>
               <div className="flex gap-[1.3rem]">
@@ -195,9 +205,13 @@ export default function DesktopDisplay({
                   />
                 </svg>
                 {userInfo?.company ? (
-                  <span>{userInfo.company}</span>
+                  <span className="text-[1.5rem] font-[400]">
+                    {userInfo.company}
+                  </span>
                 ) : (
-                  <span className="opacity-[0.5]">Not Available</span>
+                  <span className="opacity-[0.5] text-[1.5rem] font-[400]">
+                    Not Available
+                  </span>
                 )}
               </div>
             </div>
