@@ -4,6 +4,9 @@ export default function MainDisplay() {
     <div>
       <div>
         <img src={Logo} alt="" />
+        <h2>The Octocat</h2>
+        <span>@octocat</span>
+        <p>Joined 25 Jan 2011</p>
       </div>
     </div>
   );
