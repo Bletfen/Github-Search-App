@@ -2,7 +2,7 @@ import SearchSvg from "/assets/icon-search.svg";
 export default function SearchInput() {
   return (
     <div
-      className="px-[2.4rem] text-[#fff] w-full
+      className="text-[#fff] w-full
       flex pt-[0.65rem] pb-[0.75rem] pl-[1.6rem] pr-[0.7rem]
       rounded-[1.5rem] bg-[#1e2a47] items-center mt-[3.5rem]"
     >

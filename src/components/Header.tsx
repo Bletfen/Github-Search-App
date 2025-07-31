@@ -3,7 +3,7 @@ export default function Header() {
   return (
     <div
       className="flex justify-between 
-      px-[2.4rem] pt-[3.1rem] items-center
+      pt-[3.1rem] items-center
       text-[#fff]"
     >
       <h1 className="text-[2.6rem] font-[700]">devfinder</h1>
