@@ -22,14 +22,15 @@ export default function MainDisplay({
           {userInfo && (
             <h2 className="text-[1.6rem] font-[700]">{userInfo.name}</h2>
           )}
-          <span className="text-[#0079ff]">@octocat</span>
-          <p className="mt-[0.6rem]">Joined 25 Jan 2011</p>
+          <span className="text-[#0079ff]">{userInfo?.login}</span>
+          <p className="mt-[0.6rem]">{userInfo?.created_at}</p>
         </div>
       </div>
-      <p className="leading-[2.5rem]">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-        Quisque volutpat mattis eros.
-      </p>
+      {userInfo && (
+        <p className="leading-[2.5rem]">
+          {userInfo.bio ? userInfo.bio : "No bio available"}
+        </p>
+      )}
       <div
         className="flex py-[1.8rem] px-[1.5rem]
       bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center
@@ -37,36 +38,58 @@ export default function MainDisplay({
       >
         <div className="flex flex-col gap-[0.8rem]">
           <span>Repos</span>
-          <span className="text-[1.6rem] font-[700] uppercase">8</span>
+          <span className="text-[1.6rem] font-[700] uppercase">
+            {userInfo?.public_repos}
+          </span>
         </div>
         <div className="flex flex-col gap-[0.8rem]">
           <span>Followers</span>
-          <span className="text-[1.6rem] font-[700] uppercase">3938</span>
+          <span className="text-[1.6rem] font-[700] uppercase">
+            {userInfo?.followers}
+          </span>
         </div>
         <div className="flex flex-col gap-[0.8rem]">
           <span>Following</span>
-          <span className="text-[1.6rem] font-[700] uppercase">9</span>
+          <span className="text-[1.6rem] font-[700] uppercase">
+            {userInfo?.following}
+          </span>
         </div>
       </div>
       <div className="mt-[2.5rem] flex flex-col gap-[1.6rem]">
         <div className="flex flex-col gap-[1.6rem]">
           <div className="flex gap-[1.9rem]">
             <img src={Location} alt="icon-location" />
-            <span>San Francisco</span>
+            <span>
+              {userInfo?.location ? userInfo.location : "Not Available"}
+            </span>
           </div>
           <div className="flex gap-[1.3rem]">
             <img src={WebSite} alt="icon-website" />
-            <span>https://github.blog</span>
+
+            <a
+              href={userInfo?.blog ?? undefined}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline"
+            >
+              {userInfo?.blog ? userInfo.blog : "Not Available"}
+            </a>
           </div>
         </div>
         <div className="flex flex-col gap-[1.6rem]">
           <div className="flex gap-[1.3rem]">
             <img src={Twitter} alt="icon-twitter" />
-            <span>Not Available</span>
+            <span>
+              {userInfo?.twitter_username
+                ? userInfo.twitter_username
+                : "Not Available"}
+            </span>
           </div>
           <div className="flex gap-[1.3rem]">
             <img src={Company} alt="icon-company" />
-            <span>@github</span>
+            <span>
+              {userInfo?.company ? userInfo.company : "Not Available"}
+            </span>
           </div>
         </div>
       </div>
