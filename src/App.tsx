@@ -11,7 +11,7 @@ function App() {
     flex-col items-center justify-center"
     >
       <Header />
-      <SearchInput />
+      <SearchInput searchInput={searchInput} setSearchInput={setSearchInput} />
       <MainDisplay />
     </div>
   );
