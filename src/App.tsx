@@ -29,7 +29,7 @@ function App() {
         setSearchInput={setSearchInput}
         fetchData={fetchData}
       />
-      <MainDisplay searchInput={searchInput} userInfo={userInfo} />
+      <MainDisplay userInfo={userInfo} />
     </div>
   );
 }

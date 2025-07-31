@@ -3,13 +3,11 @@ import Location from "/assets/icon-location.svg";
 import WebSite from "/assets/icon-website.svg";
 import Twitter from "/assets/icon-twitter.svg";
 import Company from "/assets/icon-company.svg";
-import type { TSearch, IuserInfo } from "../types";
+import type { IuserInfo } from "../types";
 
 export default function MainDisplay({
-  searchInput,
   userInfo,
 }: {
-  searchInput: TSearch;
   userInfo: IuserInfo | null;
 }) {
   return (
