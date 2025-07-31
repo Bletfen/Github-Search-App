@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import SearchInput from "./components/SearchInput";
 import MainDisplay from "./components/MainDisplay";
-import type { TSearch } from "./types";
+import type { TSearch, IuserInfo } from "./types";
 function App() {
   const [searchInput, setSearchInput] = useState<TSearch>("");
-  const [userInfo, setUserInfo] = useState<{}>({});
+  const [userInfo, setUserInfo] = useState<IuserInfo | null>(null);
   const fetchData = async () => {
     const response = await fetch(`https://api.github.com/users/${searchInput}`);
     const resData = await response.json();

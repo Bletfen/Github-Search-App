@@ -3,14 +3,14 @@ import Location from "/assets/icon-location.svg";
 import WebSite from "/assets/icon-website.svg";
 import Twitter from "/assets/icon-twitter.svg";
 import Company from "/assets/icon-company.svg";
-import type { TSearch } from "../types";
+import type { TSearch, IuserInfo } from "../types";
 
 export default function MainDisplay({
   searchInput,
   userInfo,
 }: {
   searchInput: TSearch;
-  userInfo: {};
+  userInfo: IuserInfo | null;
 }) {
   return (
     <div
@@ -21,7 +21,9 @@ export default function MainDisplay({
       <div className="flex items-center gap-[2rem] mb-[3.3rem]">
         <img src={Logo} alt="" className="w-[7rem] h-[7rem]" />
         <div className="flex flex-col">
-          <h2 className="text-[1.6rem] font-[700]">{userInfo.name}</h2>
+          {userInfo && (
+            <h2 className="text-[1.6rem] font-[700]">{userInfo.name}</h2>
+          )}
           <span className="text-[#0079ff]">@octocat</span>
           <p className="mt-[0.6rem]">Joined 25 Jan 2011</p>
         </div>
