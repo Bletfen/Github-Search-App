@@ -27,6 +27,8 @@ export default function DesktopDisplay({
               )}
               <a
                 href={`https://github.com/${userInfo?.login}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#0079ff] text-[1.6rem]"
               >
                 @{userInfo?.login}
