@@ -2,8 +2,8 @@ import SunSvg from "/assets/icon-sun.svg";
 export default function Header() {
   return (
     <div
-      className="flex justify-between 
-      pt-[3.1rem] items-center
+      className="flex w-full justify-between
+      pt-[3.1rem]
       text-[#fff]
       max-w-[73rem]"
     >
