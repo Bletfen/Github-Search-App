@@ -8,24 +8,17 @@ export default function MainDisplay() {
   return (
     <div
       className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem]
-    px-[2.4rem] mt-[1.6rem]"
+      px-[2.4rem] mt-[1.6rem] text-[1.3rem] font-[400] text-[#fff]"
     >
-      <div className="flex items-center gap-[2rem]">
+      <div className="flex items-center gap-[2rem] mb-[3.3rem]">
         <img src={Logo} alt="" className="w-[7rem] h-[7rem]" />
-        <div
-          className="flex flex-col
-          text-[#fff]"
-        >
+        <div className="flex flex-col">
           <h2 className="text-[1.6rem] font-[700]">The Octocat</h2>
-          <span className="text-[#0079ff] text-[1.3rem] font-[400]">
-            @octocat
-          </span>
-          <p className="mt-[0.6rem] text-[1.3rem] font-[400]">
-            Joined 25 Jan 2011
-          </p>
+          <span className="text-[#0079ff]">@octocat</span>
+          <p className="mt-[0.6rem]">Joined 25 Jan 2011</p>
         </div>
       </div>
-      <p>
+      <p className="leading-[2.5rem]">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
         Quisque volutpat mattis eros.
       </p>
