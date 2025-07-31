@@ -4,7 +4,7 @@ export default function SearchInput() {
     <div
       className="px-[2.4rem] text-[#fff] w-full
       flex pt-[0.65rem] pb-[0.75rem] pl-[1.6rem] pr-[0.7rem]
-      rounded-[1.5rem] bg-[#1e2a47] items-center"
+      rounded-[1.5rem] bg-[#1e2a47] items-center mt-[3.5rem]"
     >
       <img src={SearchSvg} alt="search-icon" className="mr-[0.8rem]" />
       <input
