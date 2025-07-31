@@ -76,9 +76,11 @@ export default function MainDisplay({
         <div className="flex flex-col gap-[1.6rem]">
           <div className="flex gap-[1.9rem]">
             <img src={Location} alt="icon-location" />
-            <span>
-              {userInfo?.location ? userInfo.location : "Not Available"}
-            </span>
+            {userInfo?.location ? (
+              <span>{userInfo.location}</span>
+            ) : (
+              <span className="opacity-[0.5]">Not Available</span>
+            )}
           </div>
           <div className="flex gap-[1.3rem]">
             <img src={WebSite} alt="icon-website" />
@@ -93,7 +95,7 @@ export default function MainDisplay({
                 {userInfo.blog}
               </a>
             ) : (
-              <span className="text-gray-500">Not Available</span>
+              <span className="opacity-[0.5]">Not Available</span>
             )}
           </div>
         </div>
@@ -110,7 +112,7 @@ export default function MainDisplay({
                 {userInfo?.twitter_username}
               </a>
             ) : (
-              <span>Not Available</span>
+              <span className="opacity-[0.5]">Not Available</span>
             )}
           </div>
           <div className="flex gap-[1.3rem]">
