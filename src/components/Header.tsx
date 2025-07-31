@@ -4,7 +4,8 @@ export default function Header() {
     <div
       className="flex justify-between 
       pt-[3.1rem] items-center
-      text-[#fff]"
+      text-[#fff]
+      max-w-[73rem]"
     >
       <h1 className="text-[2.6rem] font-[700]">devfinder</h1>
       <div className="flex items-center gap-[1.6rem]">

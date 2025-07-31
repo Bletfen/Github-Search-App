@@ -8,7 +8,8 @@ export default function MainDisplay() {
   return (
     <div
       className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem]
-      px-[2.4rem] mt-[1.6rem] text-[1.3rem] font-[400] text-[#fff]"
+      px-[2.4rem] mt-[1.6rem] text-[1.3rem] font-[400] text-[#fff]
+      max-w-[73rem]"
     >
       <div className="flex items-center gap-[2rem] mb-[3.3rem]">
         <img src={Logo} alt="" className="w-[7rem] h-[7rem]" />
@@ -24,7 +25,8 @@ export default function MainDisplay() {
       </p>
       <div
         className="flex py-[1.8rem] px-[1.5rem]
-      bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center"
+      bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center
+      justify-start"
       >
         <div className="flex flex-col">
           <span>Repos</span>
