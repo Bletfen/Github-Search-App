@@ -100,11 +100,18 @@ export default function MainDisplay({
         <div className="flex flex-col gap-[1.6rem]">
           <div className="flex gap-[1.3rem]">
             <img src={Twitter} alt="icon-twitter" />
-            <a href={`https://x.com/${userInfo?.twitter_username}`}>
-              {userInfo?.twitter_username
-                ? userInfo.twitter_username
-                : "Not Available"}
-            </a>
+            {userInfo?.twitter_username ? (
+              <a
+                href={`https://x.com/${userInfo?.twitter_username}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 underline"
+              >
+                {userInfo?.twitter_username}
+              </a>
+            ) : (
+              <span>Not Available</span>
+            )}
           </div>
           <div className="flex gap-[1.3rem]">
             <img src={Company} alt="icon-company" />
