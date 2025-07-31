@@ -1,4 +1,3 @@
-import Logo from "/assets/icon-moon.svg";
 import Location from "/assets/icon-location.svg";
 import WebSite from "/assets/icon-website.svg";
 import Twitter from "/assets/icon-twitter.svg";
@@ -17,7 +16,7 @@ export default function MainDisplay({
       max-w-[73rem]"
     >
       <div className="flex items-center gap-[2rem] mb-[3.3rem]">
-        <img src={Logo} alt="" className="w-[7rem] h-[7rem]" />
+        <img src={userInfo?.avatar_url} alt="" className="w-[7rem] h-[7rem]" />
         <div className="flex flex-col">
           {userInfo && (
             <h2 className="text-[1.6rem] font-[700]">{userInfo.name}</h2>
@@ -66,14 +65,18 @@ export default function MainDisplay({
           <div className="flex gap-[1.3rem]">
             <img src={WebSite} alt="icon-website" />
 
-            <a
-              href={userInfo?.blog ?? undefined}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 underline"
-            >
-              {userInfo?.blog ? userInfo.blog : "Not Available"}
-            </a>
+            {userInfo?.blog ? (
+              <a
+                href={userInfo.blog}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 underline"
+              >
+                {userInfo.blog}
+              </a>
+            ) : (
+              <span className="text-gray-500">Not Available</span>
+            )}
           </div>
         </div>
         <div className="flex flex-col gap-[1.6rem]">

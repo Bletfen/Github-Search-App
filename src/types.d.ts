@@ -4,7 +4,7 @@ export interface IuserInfo {
   name: string | null;
   login: string | null;
   created_at: string | null;
-  avatar_url: string | null;
+  avatar_url: string;
   bio: string | null;
   public_repos: number;
   followers: number;
