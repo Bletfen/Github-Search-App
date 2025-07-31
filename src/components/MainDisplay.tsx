@@ -28,20 +28,20 @@ export default function MainDisplay() {
       bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center
       justify-around"
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-[0.8rem]">
           <span>Repos</span>
           <span className="text-[1.6rem] font-[700] uppercase">8</span>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-[0.8rem]">
           <span>Followers</span>
           <span className="text-[1.6rem] font-[700] uppercase">3938</span>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-[0.8rem]">
           <span>Following</span>
           <span className="text-[1.6rem] font-[700] uppercase">9</span>
         </div>
       </div>
-      <div>
+      <div className="mt-[2.5rem]">
         <div>
           <div>
             <img src={Location} alt="icon-location" />
