@@ -8,6 +8,24 @@ export default function MainDisplay() {
         <span>@octocat</span>
         <p>Joined 25 Jan 2011</p>
       </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+        Quisque volutpat mattis eros.
+      </p>
+      <div>
+        <div>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
   );
 }
