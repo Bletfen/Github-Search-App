@@ -1,15 +1,17 @@
 import type { IuserInfo } from "../types";
 export default function DesktopDisplay({
   userInfo,
+  className = "",
 }: {
   userInfo: IuserInfo | null;
+  className?: string;
 }) {
   return (
     <div>
       <div
-        className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem] w-full
+        className={`bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem] w-full
       px-[2.4rem] mt-[1.6rem] text-[1.3rem] font-[400] text-[#fff]
-      max-w-[73rem] flex"
+      max-w-[73rem] flex ${className}`}
       >
         <div className="flex-shrink-0 mr-[3.7rem]">
           <img

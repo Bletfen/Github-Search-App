@@ -30,8 +30,8 @@ function App() {
         setSearchInput={setSearchInput}
         fetchData={fetchData}
       />
-      {/* <MainDisplay userInfo={userInfo} /> */}
-      <DesktopDisplay userInfo={userInfo} />
+      <MainDisplay userInfo={userInfo} className="block xl:hidden" />
+      <DesktopDisplay userInfo={userInfo} className="hidden xl:block" />
     </div>
   );
 }

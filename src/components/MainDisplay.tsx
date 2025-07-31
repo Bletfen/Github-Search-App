@@ -2,14 +2,16 @@ import type { IuserInfo } from "../types";
 
 export default function MainDisplay({
   userInfo,
+  className = "",
 }: {
   userInfo: IuserInfo | null;
+  className?: string;
 }) {
   return (
     <div
-      className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem] w-full
+      className={`bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem] w-full
       px-[2.4rem] mt-[1.6rem] text-[1.3rem] font-[400] text-[#fff]
-      max-w-[73rem]"
+      max-w-[73rem] ${className}`}
     >
       <div className="flex items-center gap-[2rem] mb-[3.3rem]">
         <img
