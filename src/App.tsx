@@ -14,7 +14,7 @@ function App() {
     console.log(resData);
   };
   useEffect(() => {
-    fetch("https://api.github.com/users/NikoT2")
+    fetch("https://api.github.com/users/ThePrimeagen")
       .then((res) => res.json())
       .then((data) => setUserInfo(data));
   }, []);
