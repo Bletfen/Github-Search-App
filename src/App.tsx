@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import SearchInput from "./components/SearchInput";
 import MainDisplay from "./components/MainDisplay";
+import DesktopDisplay from "./components/DesktopDisplay";
 import type { TSearch, IuserInfo } from "./types";
 function App() {
   const [searchInput, setSearchInput] = useState<TSearch>("");
@@ -29,7 +30,8 @@ function App() {
         setSearchInput={setSearchInput}
         fetchData={fetchData}
       />
-      <MainDisplay userInfo={userInfo} />
+      {/* <MainDisplay userInfo={userInfo} /> */}
+      <DesktopDisplay userInfo={userInfo} />
     </div>
   );
 }
