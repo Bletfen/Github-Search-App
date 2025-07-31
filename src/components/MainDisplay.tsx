@@ -1,4 +1,4 @@
-import { ReactComponent as LocationIcon } from "/assets/icon-location.svg?react";
+import Location from "/assets/icon-location.svg";
 import WebSite from "/assets/icon-website.svg";
 import Twitter from "/assets/icon-twitter.svg";
 import Company from "/assets/icon-company.svg";
@@ -75,7 +75,7 @@ export default function MainDisplay({
       <div className="mt-[2.5rem] flex flex-col gap-[1.6rem] md:flex-row md:gap-[7rem]">
         <div className="flex flex-col gap-[1.6rem]">
           <div className="flex gap-[1.9rem]">
-            <LocationIcon className="fill-[#fff]" />
+            <img src={Location} alt="icon-location" />
             {userInfo?.location ? (
               <span>{userInfo.location}</span>
             ) : (
