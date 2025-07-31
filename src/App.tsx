@@ -31,7 +31,7 @@ function App() {
         fetchData={fetchData}
       />
       <MainDisplay userInfo={userInfo} className="block xl:hidden" />
-      <DesktopDisplay userInfo={userInfo} className="hidden xl:block" />
+      <DesktopDisplay userInfo={userInfo} className="hidden xl:flex" />
     </div>
   );
 }
