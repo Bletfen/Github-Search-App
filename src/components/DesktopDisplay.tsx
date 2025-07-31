@@ -51,24 +51,24 @@ export default function DesktopDisplay({
           )}
           <div
             className="flex py-[1.8rem] px-[1.5rem]
-            bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center
+            bg-[#141d2f] rounded-[1rem] text-[1.3rem] font-[400] text-center
             justify-around mt-[3.2rem]"
           >
             <div className="flex flex-col gap-[0.8rem]">
               <span>Repos</span>
-              <span className="text-[1.6rem] font-[700] uppercase">
+              <span className="text-[2.2rem] font-[700] uppercase">
                 {userInfo?.public_repos}
               </span>
             </div>
             <div className="flex flex-col gap-[0.8rem]">
               <span>Followers</span>
-              <span className="text-[1.6rem] font-[700] uppercase">
+              <span className="text-[2.2rem] font-[700] uppercase">
                 {userInfo?.followers}
               </span>
             </div>
             <div className="flex flex-col gap-[0.8rem]">
               <span>Following</span>
-              <span className="text-[1.6rem] font-[700] uppercase">
+              <span className="text-[2.2rem] font-[700] uppercase">
                 {userInfo?.following}
               </span>
             </div>
