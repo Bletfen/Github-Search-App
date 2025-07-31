@@ -43,21 +43,21 @@ export default function MainDisplay() {
       </div>
       <div className="mt-[2.5rem] flex flex-col gap-[1.6rem]">
         <div className="flex flex-col gap-[1.6rem]">
-          <div className="flex">
+          <div className="flex gap-[1.9rem]">
             <img src={Location} alt="icon-location" />
             <span>San Francisco</span>
           </div>
-          <div className="flex">
+          <div className="flex gap-[1.3rem]">
             <img src={WebSite} alt="icon-website" />
             <span>https://github.blog</span>
           </div>
         </div>
         <div className="flex flex-col gap-[1.6rem]">
-          <div className="flex">
+          <div className="flex gap-[1.3rem]">
             <img src={Twitter} alt="icon-twitter" />
             <span>Not Available</span>
           </div>
-          <div className="flex">
+          <div className="flex gap-[1.3rem]">
             <img src={Company} alt="icon-company" />
             <span>@github</span>
           </div>
