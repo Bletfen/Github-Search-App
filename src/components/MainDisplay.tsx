@@ -22,16 +22,19 @@ export default function MainDisplay() {
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
         Quisque volutpat mattis eros.
       </p>
-      <div>
-        <div>
+      <div
+        className="flex py-[1.8rem] px-[1.5rem]
+      bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center"
+      >
+        <div className="flex flex-col">
           <span>Repos</span>
           <span>8</span>
         </div>
-        <div>
+        <div className="flex flex-col">
           <span>Followers</span>
           <span>3938</span>
         </div>
-        <div>
+        <div className="flex flex-col">
           <span>Following</span>
           <span>9</span>
         </div>
