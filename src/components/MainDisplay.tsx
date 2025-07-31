@@ -10,12 +10,15 @@ export default function MainDisplay() {
       className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem]
     px-[2.4rem] mt-[1.6rem]"
     >
-      <div className="flex items-center">
+      <div className="flex items-center gap-[2rem]">
         <img src={Logo} alt="" className="w-[7rem] h-[7rem]" />
-        <div>
-          <h2>The Octocat</h2>
+        <div
+          className="flex flex-col
+          text-[#fff]"
+        >
+          <h2 className="text-[1.6rem]">The Octocat</h2>
           <span>@octocat</span>
-          <p>Joined 25 Jan 2011</p>
+          <p className="mt-[0.6rem]">Joined 25 Jan 2011</p>
         </div>
       </div>
       <p>
