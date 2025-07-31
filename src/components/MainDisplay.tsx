@@ -5,9 +5,14 @@ import Twitter from "/assets/icon-twitter.svg";
 import Company from "/assets/icon-company.svg";
 import { useState } from "react";
 import type { TSearch } from "../types";
-import { fetchData } from "../searchFunctions";
 
-export default function MainDisplay({ searchInput }: { searchInput: TSearch }) {
+export default function MainDisplay({
+  searchInput,
+  fetchData,
+}: {
+  searchInput: TSearch;
+  fetchData: () => Promise<void>;
+}) {
   const [data, setData] = useState();
   return (
     <div

@@ -1,17 +1,22 @@
 import SearchSvg from "/assets/icon-search.svg";
 import type { TSearch } from "../types";
-import { clickHandle } from "../searchFunctions";
 
 export default function SearchInput({
   searchInput,
   setSearchInput,
+  fetchData,
 }: {
   searchInput: TSearch;
   setSearchInput: React.Dispatch<React.SetStateAction<string>>;
+  fetchData: () => Promise<void>;
 }) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(e.target.value);
   };
+  const clickHandle = () => {
+    fetchData();
+  };
+
   return (
     <div
       className="text-[#fff] w-full
@@ -32,6 +37,7 @@ export default function SearchInput({
         className="py-[1.2rem] px-[1.6rem]
       rounded-[1rem] bg-[#0079ff] text-[1.4rem] font-[700]
       cursor-[pointer]"
+        onClick={clickHandle}
       >
         Search
       </button>
