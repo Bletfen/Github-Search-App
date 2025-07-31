@@ -52,7 +52,7 @@ export default function DesktopDisplay({
           <div
             className="flex py-[1.8rem] px-[1.5rem]
       bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center
-      justify-around mt-[2.2rem]"
+      justify-around mt-[3.2rem]"
           >
             <div className="flex flex-col gap-[0.8rem]">
               <span>Repos</span>
@@ -73,7 +73,7 @@ export default function DesktopDisplay({
               </span>
             </div>
           </div>
-          <div className="mt-[2.5rem] flex flex-col gap-[1.6rem] md:flex-row md:gap-[7rem]">
+          <div className="mt-[2.5rem] flex gap-[1.6rem]">
             <div className="flex flex-col gap-[1.6rem]">
               <div className="flex gap-[1.9rem]">
                 <svg

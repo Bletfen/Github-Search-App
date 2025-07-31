@@ -68,7 +68,7 @@ export default function MainDisplay({
           </span>
         </div>
       </div>
-      <div className="mt-[2.5rem] flex flex-col gap-[1.6rem] md:flex-row md:gap-[7rem]">
+      <div className="mt-[2.5rem] flex flex-col gap-[1.6rem]">
         <div className="flex flex-col gap-[1.6rem]">
           <div className="flex gap-[1.9rem]">
             <svg
