@@ -56,19 +56,19 @@ export default function DesktopDisplay({
           >
             <div className="flex flex-col gap-[0.8rem]">
               <span>Repos</span>
-              <span className="text-[2.2rem] font-[700] uppercase">
+              <span className="text-[2.2rem] font-[700] uppercase self-start">
                 {userInfo?.public_repos}
               </span>
             </div>
             <div className="flex flex-col gap-[0.8rem]">
               <span>Followers</span>
-              <span className="text-[2.2rem] font-[700] uppercase">
+              <span className="text-[2.2rem] font-[700] uppercase self-start">
                 {userInfo?.followers}
               </span>
             </div>
             <div className="flex flex-col gap-[0.8rem]">
               <span>Following</span>
-              <span className="text-[2.2rem] font-[700] uppercase">
+              <span className="text-[2.2rem] font-[700] uppercase self-start">
                 {userInfo?.following}
               </span>
             </div>
