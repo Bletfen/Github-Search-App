@@ -31,7 +31,7 @@ export default function MainDisplay({
           >
             @{userInfo?.login}
           </a>
-          <p className="mt-[0.6rem]">{userInfo?.created_at}</p>
+          <p className="mt-[0.6rem]">Joined{userInfo?.created_at}</p>
         </div>
       </div>
       {userInfo && (
