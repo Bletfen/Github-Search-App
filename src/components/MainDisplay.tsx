@@ -100,11 +100,11 @@ export default function MainDisplay({
         <div className="flex flex-col gap-[1.6rem]">
           <div className="flex gap-[1.3rem]">
             <img src={Twitter} alt="icon-twitter" />
-            <span>
+            <a href={`https://x.com/${userInfo?.twitter_username}`}>
               {userInfo?.twitter_username
                 ? userInfo.twitter_username
                 : "Not Available"}
-            </span>
+            </a>
           </div>
           <div className="flex gap-[1.3rem]">
             <img src={Company} alt="icon-company" />
