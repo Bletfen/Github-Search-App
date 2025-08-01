@@ -2,35 +2,45 @@ import type { IuserInfo } from "../types";
 
 export default function MainDisplay({
   userInfo,
-  className = "",
 }: {
   userInfo: IuserInfo | null;
-  className?: string;
 }) {
   return (
     <div
-      className={`bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem] w-full
+      className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem] w-full
       px-[2.4rem] mt-[1.6rem] text-[1.3rem] font-[400] text-[#fff]
-      max-w-[73rem] ${className}`}
+      max-w-[73rem] xl:relative xl:pl-[20.2rem] xl:pt-[4.8rem]"
     >
       <div className="flex items-center gap-[2rem] mb-[3.3rem]">
         <img
           src={userInfo?.avatar_url}
           alt=""
-          className="w-[7rem] h-[7rem] rounded-[7rem]"
+          className="w-[7rem] h-[7rem] rounded-[7rem] 
+          xl:absolute xl:top-[4.8rem] xl:left-[4.8rem]
+          xl:w-[11.7rem] xl:h-[11.7rem]"
         />
-        <div className="flex flex-col">
+        <div
+          className="flex flex-col xl:flex-row 
+          justify-between w-full"
+        >
+          <div>
+            {userInfo && (
+              <h2
+                className="text-[1.6rem] font-[700]
+            xl:text-[2.6rem]"
+              >
+                {userInfo.name}
+              </h2>
+            )}
+            <a
+              href={`https://github.com/${userInfo?.login}`}
+              className="text-[#0079ff] text-[1.3rem] xl:text-[1.6rem]"
+            >
+              @{userInfo?.login}
+            </a>
+          </div>
           {userInfo && (
-            <h2 className="text-[1.6rem] font-[700]">{userInfo.name}</h2>
-          )}
-          <a
-            href={`https://github.com/${userInfo?.login}`}
-            className="text-[#0079ff]"
-          >
-            @{userInfo?.login}
-          </a>
-          {userInfo && (
-            <p className="mt-[0.6rem]">
+            <p className="mt-[0.6rem] text-[1.3rem] xl:text-[1.5rem]">
               Joined{" "}
               {new Date(userInfo.created_at).toLocaleDateString("en-GB", {
                 day: "2-digit",
@@ -42,35 +52,49 @@ export default function MainDisplay({
         </div>
       </div>
       {userInfo && (
-        <p className="leading-[2.5rem]">
+        <p className="leading-[2.5rem] text-[1.3rem] xl:text-[1.5rem]">
           {userInfo.bio ? userInfo.bio : "No bio available"}
         </p>
       )}
       <div
         className="flex py-[1.8rem] px-[1.5rem]
       bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center
-      justify-around mt-[2.2rem]"
+      justify-around mt-[2.2rem] xl:text-[1.3rem] xl:mt-[3.2rem]
+      xl:justify-start xl:text-start xl:gap-[9.9rem]"
       >
         <div className="flex flex-col gap-[0.8rem]">
           <span>Repos</span>
-          <span className="text-[1.6rem] font-[700] uppercase">
+          <span
+            className="text-[1.6rem] font-[700] uppercase
+          xl:text-[2.2rem]"
+          >
             {userInfo?.public_repos}
           </span>
         </div>
         <div className="flex flex-col gap-[0.8rem]">
           <span>Followers</span>
-          <span className="text-[1.6rem] font-[700] uppercase">
+          <span
+            className="text-[1.6rem] font-[700] uppercase
+          xl:text-[2.2rem]"
+          >
             {userInfo?.followers}
           </span>
         </div>
         <div className="flex flex-col gap-[0.8rem]">
           <span>Following</span>
-          <span className="text-[1.6rem] font-[700] uppercase">
+          <span
+            className="text-[1.6rem] font-[700] uppercase
+          xl:text-[2.2rem]"
+          >
             {userInfo?.following}
           </span>
         </div>
       </div>
-      <div className="mt-[2.5rem] flex flex-col gap-[1.6rem]">
+      <div
+        className="mt-[2.5rem] flex flex-col gap-[1.6rem] 
+      text-[1.3rem] xl:text-[1.5rem] font-[400] 
+      xl:mt-[3.7rem] xl:flex-row xl:gap-[6.4rem]"
+      >
         <div className="flex flex-col gap-[1.6rem]">
           <div className="flex gap-[1.9rem]">
             <svg

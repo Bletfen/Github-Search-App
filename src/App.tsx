@@ -3,10 +3,9 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import SearchInput from "./components/SearchInput";
 import MainDisplay from "./components/MainDisplay";
-import DesktopDisplay from "./components/DesktopDisplay";
 import type { TSearch, IuserInfo } from "./types";
 function App() {
-  const [searchInput, setSearchInput] = useState<TSearch>("");
+  const [searchInput, setSearchInput] = useState<TSearch>("octocat");
   const [userInfo, setUserInfo] = useState<IuserInfo | null>(null);
   const fetchData = async () => {
     const response = await fetch(`https://api.github.com/users/${searchInput}`);
@@ -15,9 +14,7 @@ function App() {
     console.log(resData);
   };
   useEffect(() => {
-    fetch("https://api.github.com/users/sindresorhus")
-      .then((res) => res.json())
-      .then((data) => setUserInfo(data));
+    fetchData();
   }, []);
   return (
     <div
@@ -30,8 +27,7 @@ function App() {
         setSearchInput={setSearchInput}
         fetchData={fetchData}
       />
-      <MainDisplay userInfo={userInfo} className="block xl:hidden" />
-      <DesktopDisplay userInfo={userInfo} className="hidden xl:flex" />
+      <MainDisplay userInfo={userInfo} />
     </div>
   );
 }
