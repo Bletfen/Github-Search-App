@@ -34,6 +34,8 @@ export default function MainDisplay({
             )}
             <a
               href={`https://github.com/${userInfo?.login}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`text-[#0079ff] text-[1.3rem] xl:text-[1.6rem] ${
                 userInfo?.login ? "hover:underline" : ""
               }`}
@@ -221,7 +223,7 @@ export default function MainDisplay({
               />
             </svg>
             {userInfo?.company ? (
-              <span>{userInfo.company}</span>
+              <span>@{userInfo.company}</span>
             ) : (
               <span className="opacity-[0.5]">Not Available</span>
             )}

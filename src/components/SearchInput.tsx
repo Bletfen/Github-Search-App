@@ -27,13 +27,17 @@ export default function SearchInput({
       rounded-[1.5rem] bg-[#1e2a47] items-center mt-[3.5rem]
       max-w-[73rem] xl:py-[0.95rem] xl:pr-[1rem] xl:pl-[3.2rem]"
     >
-      <img src={SearchSvg} alt="search-icon" className="mr-[0.8rem]" />
+      <img
+        src={SearchSvg}
+        alt="search-icon"
+        className="mr-[0.8rem] xl:mr-[2.4rem]"
+      />
       <input
         type="text"
         placeholder="Search GitHub username…"
-        className="ml-[0.7rem] w-full
+        className="w-full
         text-[#fff] text-[1.3rem] font-[400] leading-[2.5rem]
-        xl:text-[1.8rem] xl:ml-[2.4rem]"
+        xl:text-[1.8rem] outline-none"
         value={searchInput === "octocat" ? "" : searchInput}
         onChange={(e) => handleChange(e)}
       />
@@ -49,7 +53,8 @@ export default function SearchInput({
         <button
           className="py-[1.2rem] px-[1.6rem]
       rounded-[1rem] bg-[#0079ff] text-[1.4rem] font-[700]
-      cursor-[pointer] xl:text-[1.6rem] xl:px-[2.4rem]"
+      cursor-[pointer] xl:text-[1.6rem] xl:px-[2.4rem]
+      transition duration-300 hover:bg-[#60abff]"
           onClick={clickHandle}
         >
           Search

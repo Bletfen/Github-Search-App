@@ -17,6 +17,7 @@ function App() {
     }
     setNotFound(false);
     setUserInfo(resData);
+    setSearchInput("");
     console.log(resData);
   };
   useEffect(() => {
