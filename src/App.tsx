@@ -7,9 +7,15 @@ import type { TSearch, IuserInfo } from "./types";
 function App() {
   const [searchInput, setSearchInput] = useState<TSearch>("octocat");
   const [userInfo, setUserInfo] = useState<IuserInfo | null>(null);
+  const [notFound, setNotFound] = useState<boolean>(false);
   const fetchData = async () => {
     const response = await fetch(`https://api.github.com/users/${searchInput}`);
     const resData = await response.json();
+    if (resData.message === "Not Found") {
+      setNotFound(true);
+      return;
+    }
+    setNotFound(false);
     setUserInfo(resData);
     console.log(resData);
   };
@@ -26,7 +32,7 @@ function App() {
         searchInput={searchInput}
         setSearchInput={setSearchInput}
         fetchData={fetchData}
-        userInfo={userInfo}
+        notFound={notFound}
       />
       <MainDisplay userInfo={userInfo} />
     </div>

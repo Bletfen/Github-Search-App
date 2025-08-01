@@ -1,16 +1,16 @@
 import SearchSvg from "/assets/icon-search.svg";
-import type { TSearch, IuserInfo } from "../types";
+import type { TSearch } from "../types";
 
 export default function SearchInput({
   searchInput,
   setSearchInput,
   fetchData,
-  userInfo,
+  notFound,
 }: {
   searchInput: TSearch;
   setSearchInput: React.Dispatch<React.SetStateAction<string>>;
   fetchData: () => Promise<void>;
-  userInfo: IuserInfo | null;
+  notFound: boolean;
 }) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(e.target.value);
@@ -38,7 +38,7 @@ export default function SearchInput({
         onChange={(e) => handleChange(e)}
       />
       <div className="flex items-center">
-        {userInfo?.message === "Not Found" ? (
+        {notFound ? (
           <span
             className="text-[1.3rem] xl:text-[1.5rem] font-bold
         text-[#f74646] w-[9.2rem]"
