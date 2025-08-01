@@ -1,6 +1,7 @@
 export type TSearch = string;
 
 export interface IuserInfo {
+  message: string;
   name: string | null;
   login: string | null;
   created_at: string | number | date;
