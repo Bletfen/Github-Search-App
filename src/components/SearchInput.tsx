@@ -38,7 +38,7 @@ export default function SearchInput({
         className="w-full
         text-[#fff] text-[1.3rem] font-[400] leading-[2.5rem]
         xl:text-[1.8rem] outline-none"
-        value={searchInput === "octocat" ? "" : searchInput}
+        value={searchInput}
         onChange={(e) => handleChange(e)}
       />
       <div className="flex items-center">
