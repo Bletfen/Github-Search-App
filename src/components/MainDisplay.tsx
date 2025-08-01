@@ -9,7 +9,7 @@ export default function MainDisplay({
     <div
       className="bg-[#1e2a47] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem] w-full
       px-[2.4rem] mt-[1.6rem] text-[1.3rem] font-[400] text-[#fff]
-      max-w-[73rem] xl:relative xl:pl-[20.2rem] xl:pt-[4.8rem]"
+      max-w-[73rem] xl:relative xl:pl-[20.2rem] xl:pt-[4.4rem]"
     >
       <div className="flex items-center gap-[2rem] mb-[3.3rem]">
         <img
@@ -34,7 +34,9 @@ export default function MainDisplay({
             )}
             <a
               href={`https://github.com/${userInfo?.login}`}
-              className="text-[#0079ff] text-[1.3rem] xl:text-[1.6rem]"
+              className={`text-[#0079ff] text-[1.3rem] xl:text-[1.6rem] ${
+                userInfo?.login ? "hover:underline" : ""
+              }`}
             >
               @{userInfo?.login}
             </a>
@@ -60,7 +62,8 @@ export default function MainDisplay({
         className="flex py-[1.8rem] px-[1.5rem]
       bg-[#141d2f] rounded-[1rem] text-[1.1rem] font-[400] text-center
       justify-around mt-[2.2rem] xl:text-[1.3rem] xl:mt-[3.2rem]
-      xl:justify-start xl:text-start xl:gap-[9.9rem]"
+      xl:justify-start xl:text-start xl:gap-[9.9rem]
+      xl:pl-[3.2rem] xl:pt-[1.5rem] xl:pb-[1.7rem]"
       >
         <div className="flex flex-col gap-[0.8rem]">
           <span>Repos</span>
@@ -146,7 +149,12 @@ export default function MainDisplay({
             </svg>
 
             {userInfo?.blog ? (
-              <a href={userInfo.blog} target="_blank" rel="noopener noreferrer">
+              <a
+                href={userInfo.blog}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={userInfo.blog ? "hover:underline" : ""}
+              >
                 {userInfo.blog}
               </a>
             ) : (
@@ -178,6 +186,7 @@ export default function MainDisplay({
                 href={`https://x.com/${userInfo?.twitter_username}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                className={userInfo.blog ? "hover:underline" : ""}
               >
                 {userInfo?.twitter_username}
               </a>
