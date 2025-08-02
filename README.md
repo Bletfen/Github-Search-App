@@ -1,69 +1,68 @@
-# React + TypeScript + Vite
+# GitHub Search App 🔍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React + TypeScript web app that allows users to search for GitHub profiles and view detailed user information.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔎 Search GitHub users by username
+- 🌗 Toggle between Light and Dark mode
+- 📱 Fully responsive layout (Mobile-first design)
+- ⚙️ Built with Vite, React, TypeScript, and TailwindCSS
+- ❌ Handles "user not found" errors gracefully
 
-## Expanding the ESLint configuration
+## 🚀 Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[➡️ View Live](https://github-search-app-five-sepia.vercel.app/)  
+_(Replace with actual deployed URL)_
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Built With
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [GitHub API](https://docs.github.com/en/rest)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📂 Project Structure
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+src/
+├── assets/ # Images and icons
+├── components/ # Reusable React components
+├── hooks/ # Custom hooks (if any)
+├── App.tsx # Main app structure
+├── index.tsx # Entry point
+├── main.css # Tailwind + custom CSS
+├── vite.config.ts # Vite configuration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Setup Instructions
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repo**
+
+   ```bash
+   git clone https://github.com/Bletfen/Github-Search-App.git
+   cd Github-Search-App
+
+    Install dependencies
+   ```
+
+npm install
+
+Run the app
+
+npm run dev
+
+Build for production
+
+    npm run build
+
+🧠 Learning Points
+
+    TypeScript + React project structure
+
+    Tailwind CSS utility-first design
+
+    DOM manipulation in React using useEffect
+
+    GitHub API fetch and error handling
+
+    Theme toggling using document.documentElement.classList
