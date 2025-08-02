@@ -12,8 +12,7 @@ A responsive React + TypeScript web app that allows users to search for GitHub p
 
 ## 🚀 Live Demo
 
-[➡️ View Live](https://github-search-app-five-sepia.vercel.app/)  
-_(Replace with actual deployed URL)_
+[➡️ View Live](https://github-search-app-five-sepia.vercel.app/)
 
 ## 🛠️ Built With
 
