@@ -8,6 +8,7 @@ function App() {
   const [searchInput, setSearchInput] = useState<TSearch>("octocat");
   const [userInfo, setUserInfo] = useState<IuserInfo | null>(null);
   const [notFound, setNotFound] = useState<boolean>(false);
+  const [dark, setDark] = useState<boolean>(false);
   const fetchData = async () => {
     const response = await fetch(`https://api.github.com/users/${searchInput}`);
     const resData = await response.json();
@@ -22,10 +23,15 @@ function App() {
   };
   useEffect(() => {
     fetchData();
+    if (dark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }, []);
   return (
     <div
-      className="bg-[#141d2f] h-screen px-[2.4rem] flex
+      className="bg-[#f6f8ff] h-screen px-[2.4rem] flex
     flex-col items-center justify-center"
     >
       <Header />
