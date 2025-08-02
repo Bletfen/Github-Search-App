@@ -66,3 +66,7 @@ Build for production
     GitHub API fetch and error handling
 
     Theme toggling using document.documentElement.classList
+
+📧 Contact
+
+Created by @Bletfen — feel free to reach out!
