@@ -9,7 +9,8 @@ export default function MainDisplay({
     <div
       className="bg-[#fefefe] rounded-[1.5rem] pt-[3.3rem] pb-[4.8rem] w-full
       px-[2.4rem] mt-[1.6rem] text-[1.3rem] font-[400]
-      max-w-[73rem] xl:relative xl:pl-[20.2rem] xl:pt-[4.4rem]"
+      max-w-[73rem] xl:relative xl:pl-[20.2rem] xl:pt-[4.4rem]
+      dark:bg-[#1e2a47] transition duration-500"
     >
       <div className="flex items-center gap-[2rem] mb-[3.3rem]">
         <img
@@ -27,7 +28,7 @@ export default function MainDisplay({
             {userInfo && (
               <h2
                 className="text-[#2b3442] text-[1.6rem] font-[700]
-            xl:text-[2.6rem]"
+                xl:text-[2.6rem] dark:text-[#fff]"
               >
                 {userInfo.name}
               </h2>
@@ -44,7 +45,10 @@ export default function MainDisplay({
             </a>
           </div>
           {userInfo && (
-            <p className="mt-[0.6rem] text-[1.3rem] xl:text-[1.5rem] text-[#697c9a]">
+            <p
+              className="mt-[0.6rem] text-[1.3rem] xl:text-[1.5rem] text-[#697c9a]
+            dark:text-[#fff]"
+            >
               Joined{" "}
               {new Date(userInfo.created_at).toLocaleDateString("en-GB", {
                 day: "2-digit",
@@ -56,7 +60,10 @@ export default function MainDisplay({
         </div>
       </div>
       {userInfo && (
-        <p className="text-[#4b6a9b] leading-[2.5rem] text-[1.3rem] xl:text-[1.5rem]">
+        <p
+          className="text-[#4b6a9b] leading-[2.5rem] 
+        text-[1.3rem] xl:text-[1.5rem] dark:text-[#fff]"
+        >
           {userInfo.bio ? userInfo.bio : "No bio available"}
         </p>
       )}
@@ -65,13 +72,14 @@ export default function MainDisplay({
       bg-[#f6f8ff] rounded-[1rem] text-[1.1rem] font-[400] text-center
       justify-around mt-[2.2rem] xl:text-[1.3rem] xl:mt-[3.2rem]
       xl:justify-start xl:text-start xl:gap-[9.9rem]
-      xl:pl-[3.2rem] xl:pt-[1.5rem] xl:pb-[1.7rem]"
+      xl:pl-[3.2rem] xl:pt-[1.5rem] xl:pb-[1.7rem]
+      dark:bg-[#141d2f] transition duration-500 dark:text-[#fff]"
       >
         <div className="flex flex-col gap-[0.8rem]">
           <span>Repos</span>
           <span
             className="text-[1.6rem] font-[700] uppercase text-[#2b3442]
-          xl:text-[2.2rem]"
+          xl:text-[2.2rem] dark:text-[#fff]"
           >
             {userInfo?.public_repos}
           </span>
@@ -80,7 +88,7 @@ export default function MainDisplay({
           <span>Followers</span>
           <span
             className="text-[1.6rem] font-[700] uppercase
-          xl:text-[2.2rem] text-[#2b3442]"
+          xl:text-[2.2rem] text-[#2b3442] dark:text-[#fff]"
           >
             {userInfo?.followers}
           </span>
@@ -89,7 +97,7 @@ export default function MainDisplay({
           <span>Following</span>
           <span
             className="text-[1.6rem] font-[700] uppercase
-          xl:text-[2.2rem] text-[#2b3442]"
+          xl:text-[2.2rem] text-[#2b3442] dark:text-[#fff]"
           >
             {userInfo?.following}
           </span>
@@ -98,7 +106,7 @@ export default function MainDisplay({
       <div
         className="mt-[2.5rem] flex flex-col gap-[1.6rem] 
       text-[1.3rem] xl:text-[1.5rem] font-[400] 
-      xl:mt-[3.7rem] xl:flex-row xl:gap-[6.4rem] text-[#4b6a9b]"
+      xl:mt-[3.7rem] xl:flex-row xl:gap-[6.4rem] text-[#4b6a9b] dark:text-[#fff]"
       >
         <div className="flex flex-col gap-[1.6rem]">
           <div className="flex gap-[1.9rem]">

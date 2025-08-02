@@ -25,7 +25,8 @@ export default function SearchInput({
       className="w-full
       flex pt-[0.65rem] pb-[0.75rem] pl-[1.6rem] pr-[0.7rem]
       rounded-[1.5rem] bg-[#fefefe] items-center mt-[3.5rem]
-      max-w-[73rem] xl:py-[0.95rem] xl:pr-[1rem] xl:pl-[3.2rem]"
+      max-w-[73rem] xl:py-[0.95rem] xl:pr-[1rem] xl:pl-[3.2rem]
+      dark:bg-[#1e2a47] transition duration-500"
     >
       <img
         src={SearchSvg}
@@ -37,7 +38,8 @@ export default function SearchInput({
         placeholder="Search GitHub username…"
         className="w-full
         text-[#4b6a9b] text-[1.3rem] font-[400] leading-[2.5rem]
-        xl:text-[1.8rem] outline-none placeholder:text-[#4b6a9b]"
+        xl:text-[1.8rem] outline-none placeholder:text-[#4b6a9b]
+        dark:text-[#fff] dark:placeholder:text-[#fff]"
         value={searchInput}
         onChange={(e) => handleChange(e)}
       />
