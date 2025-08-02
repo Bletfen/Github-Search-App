@@ -23,18 +23,20 @@ function App() {
   };
   useEffect(() => {
     fetchData();
+  }, []);
+  useEffect(() => {
     if (dark) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, []);
+  }, [dark]);
   return (
     <div
       className="bg-[#f6f8ff] h-screen px-[2.4rem] flex
-    flex-col items-center justify-center"
+    flex-col items-center justify-center dark:bg-[#141d2f] transition duration-500"
     >
-      <Header />
+      <Header dark={dark} setDark={setDark} />
       <SearchInput
         searchInput={searchInput}
         setSearchInput={setSearchInput}
