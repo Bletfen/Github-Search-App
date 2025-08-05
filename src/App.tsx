@@ -1,16 +1,18 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "./components/Header";
 import SearchInput from "./components/SearchInput";
 import MainDisplay from "./components/MainDisplay";
-import type { TSearch, IuserInfo } from "./types";
+import type { IuserInfo } from "./types";
 function App() {
-  const [searchInput, setSearchInput] = useState<TSearch>("octocat");
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const [userInfo, setUserInfo] = useState<IuserInfo | null>(null);
   const [notFound, setNotFound] = useState<boolean>(false);
   const [dark, setDark] = useState<boolean>(false);
-  const fetchData = async () => {
-    const response = await fetch(`https://api.github.com/users/${searchInput}`);
+  const fetchData = async (queryArg?: string) => {
+    const query = (queryArg ?? inputRef.current?.value ?? "").trim();
+    if (!query) return;
+    const response = await fetch(`https://api.github.com/users/${query}`);
     const resData = await response.json();
     if (resData.message === "Not Found") {
       setNotFound(true);
@@ -18,7 +20,6 @@ function App() {
     }
     setNotFound(false);
     setUserInfo(resData);
-    setSearchInput("");
     console.log(resData);
   };
   useEffect(() => {
@@ -38,8 +39,7 @@ function App() {
     >
       <Header dark={dark} setDark={setDark} />
       <SearchInput
-        searchInput={searchInput}
-        setSearchInput={setSearchInput}
+        inputRef={inputRef}
         fetchData={fetchData}
         notFound={notFound}
       />

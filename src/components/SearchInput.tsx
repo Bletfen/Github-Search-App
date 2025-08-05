@@ -1,23 +1,15 @@
 import SearchSvg from "/assets/icon-search.svg";
-import type { TSearch } from "../types";
-
 export default function SearchInput({
-  searchInput,
-  setSearchInput,
+  inputRef,
   fetchData,
   notFound,
 }: {
-  searchInput: TSearch;
-  setSearchInput: React.Dispatch<React.SetStateAction<string>>;
+  inputRef: React.RefObject<HTMLInputElement | null>;
   fetchData: () => Promise<void>;
   notFound: boolean;
 }) {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchInput(e.target.value);
-  };
   const clickHandle = () => {
     fetchData();
-    setSearchInput("");
   };
 
   return (
@@ -34,14 +26,14 @@ export default function SearchInput({
         className="mr-[0.8rem] xl:mr-[2.4rem]"
       />
       <input
+        ref={inputRef}
         type="text"
         placeholder="Search GitHub username…"
         className="w-full
         text-[#4b6a9b] text-[1.3rem] font-[400] leading-[2.5rem]
         xl:text-[1.8rem] outline-none placeholder:text-[#4b6a9b]
         dark:text-[#fff] dark:placeholder:text-[#fff]"
-        value={searchInput}
-        onChange={(e) => handleChange(e)}
+        defaultValue={"octocat"}
       />
       <div className="flex items-center">
         {notFound ? (
