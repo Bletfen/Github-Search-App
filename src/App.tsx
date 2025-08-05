@@ -18,12 +18,15 @@ function App() {
       setNotFound(true);
       return;
     }
+
     setNotFound(false);
     setUserInfo(resData);
-    console.log(resData);
+    if (inputRef.current) {
+      inputRef.current.value = "";
+    }
   };
   useEffect(() => {
-    fetchData();
+    fetchData("octocat");
   }, []);
   useEffect(() => {
     if (dark) {

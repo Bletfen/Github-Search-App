@@ -8,6 +8,12 @@ export default function SearchInput({
   fetchData: () => Promise<void>;
   notFound: boolean;
 }) {
+  const keyDownHandle = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      fetchData();
+    }
+  };
+
   const clickHandle = () => {
     fetchData();
   };
@@ -33,7 +39,7 @@ export default function SearchInput({
         text-[#4b6a9b] text-[1.3rem] font-[400] leading-[2.5rem]
         xl:text-[1.8rem] outline-none placeholder:text-[#4b6a9b]
         dark:text-[#fff] dark:placeholder:text-[#fff]"
-        defaultValue={"octocat"}
+        onKeyDown={keyDownHandle}
       />
       <div className="flex items-center">
         {notFound ? (
