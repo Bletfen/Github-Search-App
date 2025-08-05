@@ -1,9 +1,9 @@
 export default function Header({
-  dark,
-  setDark,
+  isDark,
+  setIsDark,
 }: {
-  dark: boolean;
-  setDark: React.Dispatch<React.SetStateAction<boolean>>;
+  isDark: boolean;
+  setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
     <div
@@ -18,16 +18,16 @@ export default function Header({
         className="flex items-center gap-[1.6rem]
         group cursor-[pointer]
       "
-        onClick={() => setDark((prev) => !prev)}
+        onClick={() => setIsDark((prev) => !prev)}
       >
         <p
           className="text-[1.3rem] font-[700] 
         tracking-[0.25rem] text-[#4b6a9b] group-hover:text-[#222731] transition duration-300
         dark:text-[#fff] dark:group-hover:text-[#90a4d4]"
         >
-          {dark ? "LIGTH" : "DARK"}
+          {isDark ? "LIGTH" : "DARK"}
         </p>
-        {!dark ? (
+        {!isDark ? (
           <svg
             width="20"
             height="20"
