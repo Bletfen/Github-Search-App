@@ -28,13 +28,11 @@ function App() {
   useEffect(() => {
     fetchData("octocat");
   }, []);
+
   useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    document.documentElement.classList.toggle("dark", dark);
   }, [dark]);
+
   return (
     <div
       className="bg-[#f6f8ff] h-screen px-[2.4rem] flex
